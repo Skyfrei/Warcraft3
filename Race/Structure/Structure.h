@@ -1,5 +1,5 @@
 #pragma once
-#include "../../Vec2.h"
+#include "../../Tools/Vec2.h"
 
 class Structure
 {
