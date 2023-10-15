@@ -1,0 +1,7 @@
+
+
+class WaterElemental
+{
+    public:
+        WaterElemental();
+};
