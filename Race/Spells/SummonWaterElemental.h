@@ -11,20 +11,24 @@
 
 
 // Summons a Water Elemental to attack the Archmage's enemies.
-class SummonWaterElemental : public Spell
+namespace Warcraft::Spells
 {
-    public:
-        SummonWaterElemental()
-        {
-            name = "Summon Water Elemental";
-            type = MANUAL;
-            manaCost = 125;
-            cooldown = 20;
-            duration = 60;
-        }
-    public:
-        virtual void GiveDescription(){}
-        Unit Spawn();
-    private:
-        float manaRegen = 0.75;
-};
+    using Warcraft::Units;
+    class SummonWaterElemental : public Spell
+    {
+        public:
+            SummonWaterElemental()
+            {
+                name = "Summon Water Elemental";
+                type = MANUAL;
+                manaCost = 125;
+                cooldown = 20;
+                duration = 60;
+            }
+        public:
+            virtual void GiveDescription(){}
+            Unit Spawn();
+        private:
+            float manaRegen = 0.75;
+    };
+}

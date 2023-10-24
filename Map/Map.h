@@ -8,5 +8,5 @@ class Map
             
         }
 
-    int map[100][100];
+    int map[50][50];
 };

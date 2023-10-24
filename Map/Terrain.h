@@ -1,13 +1,31 @@
 #pragma once
+#include "../Tools/Vec2.h"
 
-class Terrain
+namespace Warcraft::Map
 {
-    public:
-        Terrain(){}
+    enum TerrainType
+    {
+        GROUND,
+        TREE,
+        GOLD
+    };
 
-    public:
-        virtual int GetResourceLeft() = 0;
+    class Terrain
+    {
+        public:
+            Terrain(int x, int y)
+            {
+                location.x = x;
+                location.y = y;
+            }
 
-    private: 
-        int left;
-};
+        public:
+            virtual int GetResourceLeft() = 0;
+            
+        private: 
+            int resourceLeft;
+            Vec2 location;
+            TerrainType type = GROUND;
+    };
+}
+

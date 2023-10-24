@@ -2,27 +2,31 @@
 
 #include "../Unit.h"
 
-enum Attribute
+namespace Warcraft::Units::Heroes
 {
-    Strength,
-    Agility,
-    Intelligence
-};
+    enum Attribute
+    {
+        Strength,
+        Agility,
+        Intelligence
+    };
 
-class Hero : public Unit
-{
-    public: 
-        Hero()
-        {
+    class Hero : public Unit
+    {
+        public: 
+            Hero()
+            {
 
-        }
+            }
 
-    public:
-        bool hiredOnce = false;
-        float strength;
-        float agility;
-        float intelligence;
-        Attribute primaryAttribute;
-    
+        public:
+            bool hiredOnce = false;
+            float strength;
+            float agility;
+            float intelligence;
+            Attribute primaryAttribute;
+        
 
-};
+    };
+}
+

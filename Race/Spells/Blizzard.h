@@ -8,6 +8,7 @@
 
 
 // Calls down waves of freezing ice shards that damage units in a target area.
+
 class Blizzard : public Spell
 {
     public:
