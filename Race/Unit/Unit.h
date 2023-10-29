@@ -1,31 +1,16 @@
 #pragma once
 #include <vector>
 #include "../Spells/Spell.h"
+#include "../../Living.h"
 #include <string>
 
 using namespace Warcraft::Spells;
+using Warcraft::Living;
 
 namespace Warcraft::Units
 {
 
-    enum UnitClassification
-    {
-        GROUND, 
-        AIR
-    };
-
-    enum Side
-    {
-        PLAYER,
-        ENEMY
-    };
-
-    enum ProducedAt
-    {
-        
-    };
-
-    class Unit
+    class Unit : public Living
     {
         public:
             Unit()
@@ -35,28 +20,15 @@ namespace Warcraft::Units
 
         public:
             virtual void Attack() = 0;
+            virtual void RegenHealth() = 0;
 
         public:
-            float hpRegen;
-            float mana;
-            float manaRegen;
-            int goldCost;
-            int lumberCost = 0;
-            int foodCost = 1;
-            int level = 1;
-            float buildTime;
-            UnitClassification unitType;
-            ProducedAt building;
 
             float attack;
             float attackCooldown;
             float attackRange;
-            std::vector<int> canAttack;
+            int movementSpeed = 1;
 
-            float movementSpeed;
-
-            Side belongs;
-        
         public:
             std::vector<Spell*> spells;
     };

@@ -1,12 +1,14 @@
 #pragma once
 #include "../Tools/Vec2.h"
+#include "../Living.h"
+
+using Warcraft::Living;
 
 namespace Warcraft::Environment
 {
     enum TerrainType
     {
         GROUND,
-        TREE,
         GOLD
     };
 
@@ -15,8 +17,8 @@ namespace Warcraft::Environment
         public:
             Terrain(int x, int y)
             {
-                location.x = x;
-                location.y = y;
+                coord.x = x;
+                coord.y = y;
             }
 
         public:
@@ -24,8 +26,9 @@ namespace Warcraft::Environment
             
         private: 
             int resourceLeft;
-            Vec2 location;
+            Vec2 coord;
             TerrainType type = GROUND;
+            Living* object;
     };
 }
 

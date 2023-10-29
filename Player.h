@@ -16,8 +16,7 @@ class Player
 
         }
 
-
     public:
-        int gold, lumber, food, maxFood;
+        int gold, food, maxFood;
         Upkeep upkeep = NIE;
 };

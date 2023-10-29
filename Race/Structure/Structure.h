@@ -1,33 +1,21 @@
 #pragma once
 #include "../../Tools/Vec2.h"
+#include "../Living.h"
+
+using Warcraft::Living;
 
 namespace Warcraft::Structures
 {
-    class Structure
+    class Structure : public Living
     {
         public:
             Structure()
             {
-                
+                                  
             }
 
         public:
             virtual int GetHealth() = 0;
-            
-            float hp;
-            int level;
-            float goldCost;
-            float lumberCost;
-            int foodProd;
-
-            float buildTime;
-            float armor;
-            
-            float daySight;
-            float nightSight;
-
-            Vec2 pos;
-            Vec2 range;
             
             // std::vector<> building contained within building
     };

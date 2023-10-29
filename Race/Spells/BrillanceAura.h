@@ -22,7 +22,10 @@ class BrillanceAura : public Spell
         }
     
     public:
-        virtual void GetDescription(){}
+        void GetDescription() override
+        {
+            return;
+        }
         float ManaRegen(Unit& unit)
         {
             unit.mana += manaRegen;

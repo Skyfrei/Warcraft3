@@ -17,7 +17,10 @@ namespace Warcraft::Units::Heroes
                 spells.push_back(new MassTeleport());
             }
 
-        virtual void Attack() override{}
+        void Attack() override{}
+        void RegenHealth() override {}
+        std::string GetDescription() override {return "Archmage hero";}
+
     };
 }
 

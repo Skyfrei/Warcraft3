@@ -12,7 +12,7 @@ namespace Warcraft::Environment
             {
                 
             }
-        //Living*[50][50] objects;
+        Terrain*[50][50] objects;
 
     };
 }
