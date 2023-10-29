@@ -7,6 +7,8 @@
 
 
 // Teleports 24 of the player's nearby units, including the Archmage, to a friendly ground unit or structure.
+
+using namespace Warcraft::Spells;
 class MassTeleport : public Spell
 {
     public:
@@ -23,7 +25,7 @@ class MassTeleport : public Spell
         }
         
     public:
-        virtual void GiveDescription(){}
+        virtual void GetDescription(){}
     
     public:
         float delay = 3.0f;

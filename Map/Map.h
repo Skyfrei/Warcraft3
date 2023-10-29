@@ -1,12 +1,18 @@
+#include <vector>
+#include "../Entity.h"
 
+using Warcraft::Living;
 
-class Map
+namespace Warcraft::Environment
 {
-    public:
-        Map()
-        {
-            
-        }
+    class Map
+    {
+        public:
+            Map()
+            {
+                
+            }
+        //Living*[50][50] objects;
 
-    int map[50][50];
-};
+    };
+}

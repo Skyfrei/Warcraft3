@@ -19,7 +19,7 @@ namespace Warcraft::Spells
             }
 
         public:
-            virtual void GiveDescription() = 0;
+            virtual void GetDescription() = 0;
 
         public:
             float cooldown;

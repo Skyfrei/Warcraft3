@@ -9,6 +9,9 @@
 
 
 // Calls down waves of freezing ice shards that damage units in a target area.
+using namespace Warcraft::Spells;
+using Warcraft::Units::Unit;
+
 class BrillanceAura : public Spell
 {
     public:
@@ -19,7 +22,7 @@ class BrillanceAura : public Spell
         }
     
     public:
-        virtual void GiveDescription(){}
+        virtual void GetDescription(){}
         float ManaRegen(Unit& unit)
         {
             unit.mana += manaRegen;

@@ -11,9 +11,13 @@
 
 
 // Summons a Water Elemental to attack the Archmage's enemies.
+
+using namespace Warcraft::Spells;
+using Warcraft::Units::Unit;
+
 namespace Warcraft::Spells
 {
-    using Warcraft::Units;
+
     class SummonWaterElemental : public Spell
     {
         public:
@@ -26,7 +30,7 @@ namespace Warcraft::Spells
                 duration = 60;
             }
         public:
-            virtual void GiveDescription(){}
+            virtual void GetDescription(){}
             Unit Spawn();
         private:
             float manaRegen = 0.75;

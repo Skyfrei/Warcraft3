@@ -1,7 +1,7 @@
 #pragma once
 #include "../Tools/Vec2.h"
 
-namespace Warcraft::Map
+namespace Warcraft::Environment
 {
     enum TerrainType
     {

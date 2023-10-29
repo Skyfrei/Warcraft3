@@ -3,13 +3,15 @@
 #include "../Spells/Spell.h"
 #include <string>
 
+using namespace Warcraft::Spells;
 
 namespace Warcraft::Units
 {
+
     enum UnitClassification
     {
-    GROUND, 
-    AIR
+        GROUND, 
+        AIR
     };
 
     enum Side
@@ -35,8 +37,6 @@ namespace Warcraft::Units
             virtual void Attack() = 0;
 
         public:
-            std::string name;
-            float hp;
             float hpRegen;
             float mana;
             float manaRegen;
@@ -48,13 +48,11 @@ namespace Warcraft::Units
             UnitClassification unitType;
             ProducedAt building;
 
-            float armor;
             float attack;
             float attackCooldown;
+            float attackRange;
             std::vector<int> canAttack;
 
-            int daySight;
-            int nightSight;
             float movementSpeed;
 
             Side belongs;

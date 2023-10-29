@@ -9,6 +9,8 @@
 
 // Calls down waves of freezing ice shards that damage units in a target area.
 
+using namespace Warcraft::Spells;
+
 class Blizzard : public Spell
 {
     public:
@@ -24,5 +26,8 @@ class Blizzard : public Spell
 
         }
     public:
-        virtual void GiveDescription(){}
+        virtual void GetDescription() override
+        {
+            return;
+        }
 };
