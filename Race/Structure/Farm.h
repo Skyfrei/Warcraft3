@@ -22,5 +22,8 @@ class Farm : public Structure
         std::string GetDescription() override {return description;}
         int GetHealth() override {return health;}
 
+    public: 
+        int GetFood() { return 5;}
+
 
 }

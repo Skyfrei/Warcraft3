@@ -1,4 +1,7 @@
 #include <Player.h>
+#include "../Map/Map.h"
+
+using namespace Warcraft::Environment;
 
 namespace Warcraft::State
 {
@@ -8,12 +11,18 @@ namespace Warcraft::State
             Manager()
             {
                 // game start
+                map.InitializeTerrain();
                 player.Initialize();
                 enemy.Initialize();
 
+
             }
+        public:
+            void InitializeMap();
+            void CheckForMovement();
         public:
             Player player;
             Player enemy;
+            Map map;
     };
 }

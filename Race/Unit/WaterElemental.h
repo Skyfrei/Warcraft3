@@ -1,7 +1,0 @@
-
-
-class WaterElemental
-{
-    public:
-        WaterElemental();
-};

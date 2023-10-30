@@ -1,12 +1,8 @@
 #pragma once
 
 #include "Unit.h"
-#include "../Spells/Polymorph.h"
-#include "../Spells/Slow.h"
 
 #include <vector>
-
-using namespace Warcraft::Spells;
 
 namespace Warcraft::Units
 {
@@ -30,13 +26,10 @@ namespace Warcraft::Units
                 buildTime = 30;
 
                 is = OTHER;
-
-                spells.push_back(new Polymorph());
-                spells.push_back(new Slow());
             }
         
             std::string GetDescription() override{};
             void RegenHealth() override {};
-            void Attack() override {};
+            void Attack(Living& un) override {};
     };
 }

@@ -15,6 +15,18 @@ namespace Warcraft::Units
         OTHER
     };
 
+    enum Move
+    {
+        W,
+        NW,
+        N,
+        NE,
+        E,
+        SE,
+        S,
+        SW
+    };
+
     class Unit : public Living
     {
         public:
@@ -24,8 +36,46 @@ namespace Warcraft::Units
             }
 
         public:
-            virtual void Attack() = 0;
+            virtual void Attack(Living& un) = 0;
             virtual void RegenHealth() = 0;
+        
+        public:
+            void Move(Move dir)
+            {
+                switch (dir)
+                {
+                case W:
+                    
+                    break;
+                case NW:
+
+                    break;
+
+                case N:
+
+                    break;
+
+                case NE:
+
+                    break;
+
+                case E:
+
+                    break;
+
+                case SE:
+
+                    break;
+
+                case S:
+                    
+                    break;
+
+                case SW:
+
+                    break;
+                }
+            }
 
         public:
         
@@ -36,8 +86,5 @@ namespace Warcraft::Units
             int movementSpeed = 1;
             float hpRegen = 0.25f;
             Type is;
-
-        public:
-            std::vector<Spell*> spells;
     };
 }

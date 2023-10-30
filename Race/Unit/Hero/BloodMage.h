@@ -28,7 +28,7 @@ namespace Warcraft::Units::Heroes
                 spells.push_back(new SiphonMana());
             }
 
-        void Attack() override{}
+        void Attack(Living& un) override{}
         void RegenHealth() override {}
         std::string GetDescription() override {return "Bloodmage hero";}
 

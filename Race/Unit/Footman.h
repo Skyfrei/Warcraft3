@@ -27,6 +27,6 @@ namespace Warcraft::Units
         
             std::string GetDescription() override{};
             void RegenHealth() override {};
-            void Attack() override {};
+            void Attack(Living& un) override {};
     };
 }

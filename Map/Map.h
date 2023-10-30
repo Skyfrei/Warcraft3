@@ -14,5 +14,11 @@ namespace Warcraft::Environment
             }
         Terrain*[50][50] objects;
 
+        public:
+            void InitializeTerrain()
+            {
+                
+            }
+
     };
 }

@@ -22,7 +22,8 @@ namespace Warcraft
         public:
             Living()
             {
-                
+                id = objNumber;
+                objNumber++;
             }
 
         virtual std::string GetDescription() = 0;
@@ -32,6 +33,8 @@ namespace Warcraft
             std::string description;
             int health;
             int armor;
+            static int objNumber;
+            int id;
             
             float hpRegen = 0;
             float mana = 0;

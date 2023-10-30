@@ -4,8 +4,11 @@
 #include "../Unit/Peasant.h"
 #include "../Unit/Sorceress.h"
 #include "../Unit/Footman.h"
+#include "../Unit/Hero/Archmage.h"
+#include "../Unit/Hero/BloodMage.h"
 
 using namespace Warcraft::Units;
+using namespace Warcraft::Units::Heroes;
 
 namespace Warcraft::Structures
 {
@@ -13,7 +16,9 @@ namespace Warcraft::Structures
     {
         FOOTMAN,
         PEASANT,
-        SORCERESS
+        SORCERESS,
+        ARCHMAGE,
+        BLOODMAGE
     };
 
     class Barrack : public Structure
@@ -36,12 +41,25 @@ namespace Warcraft::Structures
             {
                 switch (type)
                 {
-                case FOOTMAN:
-                    Footman man;
-                    return man;
-                
-                default:
-                    break;
+                    case FOOTMAN:
+                        Footman man;
+                        return man;
+
+                    case PEASANT:
+                        Peasant slave;
+                        return slave;
+
+                    case SORCERESS:
+                        Sorceress sorc;
+                        return sorc;
+
+                    case ARCHMAGE:
+                        Archmage arch;
+                        return arch;
+                        
+                    case BLOODMAGE:
+                        BloodMage blood;
+                        return blood;
                 }
                 return;
             }
