@@ -20,7 +20,6 @@ namespace Warcraft::Units
                 health = 325;
                 armor = 2;
                 attack = 11;
-                hpRegen = 0.25;
                 mana = 200;
                 manaRegen = 0.67f;
 
@@ -29,6 +28,8 @@ namespace Warcraft::Units
 
                 attackCooldown = 1.7;
                 buildTime = 30;
+
+                is = OTHER;
 
                 spells.push_back(new Polymorph());
                 spells.push_back(new Slow());

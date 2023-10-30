@@ -14,7 +14,6 @@ namespace Warcraft::Units
                 health = 420;
                 armor = 2;
                 attack = 12.5;
-                hpRegen = 0.25;
 
                 goldCold = 135;
                 foodCost = 2;
@@ -22,6 +21,7 @@ namespace Warcraft::Units
                 attackCooldown = 1.35;
                 buildTime = 20;
 
+                is = OTHER;
 
             }
         

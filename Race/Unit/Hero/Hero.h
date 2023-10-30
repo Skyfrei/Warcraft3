@@ -6,9 +6,9 @@ namespace Warcraft::Units::Heroes
 {
     enum Attribute
     {
-        Strength,
-        Agility,
-        Intelligence
+        STRENGTH,
+        AGILITY,
+        INTELLIGENCE
     };
 
     class Hero : public Unit

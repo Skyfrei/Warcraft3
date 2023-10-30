@@ -5,6 +5,7 @@
 
 namespace Warcraft
 {   
+
     enum Side
     {
         PLAYER,
@@ -41,7 +42,7 @@ namespace Warcraft
             
             int buildTime;
 
-            Side is;
+            Side belongs;
             ProducedAt buildsAt;
 
             

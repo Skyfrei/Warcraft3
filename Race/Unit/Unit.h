@@ -9,6 +9,11 @@ using Warcraft::Living;
 
 namespace Warcraft::Units
 {
+    enum Type
+    {
+        PEASANT,
+        OTHER
+    };
 
     class Unit : public Living
     {
@@ -23,11 +28,14 @@ namespace Warcraft::Units
             virtual void RegenHealth() = 0;
 
         public:
-
+        
+            bool isInvisible = false;
             float attack;
             float attackCooldown;
             float attackRange;
             int movementSpeed = 1;
+            float hpRegen = 0.25f;
+            Type is;
 
         public:
             std::vector<Spell*> spells;
